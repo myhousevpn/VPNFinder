@@ -1,0 +1,39 @@
+name: myhousevpnfinder
+description: A Flutter app to find MyHouseVPN devices based on IP list.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none'
+
+version: 0.1.0
+
+environment:
+  sdk: ">=3.5.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.3
+  url_launcher: ^6.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.0  # Add this for launcher icons
+
+flutter_icons:
+  android: true
+  ios: true
+  macos: true
+  windows: true
+  image_path: "assets/logo.png"  # Path to your main icon file
+  adaptive_icon_background: "#FFFFFF" # Optional: Background color for Android adaptive icons
+  adaptive_icon_foreground: "assets/logo.png" # Optional: Foreground icon for Android adaptive icons
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo.png
+    - assets/logo.ico
+

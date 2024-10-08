@@ -1,3 +1,3 @@
-# flutter_application_1
+# MyHouseVPN Device Finder
 
-A new Flutter project.
+This is the official app for the MyHouseVPN Device.

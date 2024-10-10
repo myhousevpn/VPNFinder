@@ -1,11 +1,11 @@
 name: myhousevpnfinder
-description: A Flutter app to find MyHouseVPN devices based on IP list.
+description:  MyHouseVPN official app to find your MyHouseVPN device in your network.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none'
 
-version: 0.1.0
+version: 1.1.0
 
 environment:
   sdk: ">=3.5.2 <4.0.0"

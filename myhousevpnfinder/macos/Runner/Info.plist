@@ -29,6 +29,10 @@
     <key>NSPrincipalClass</key>
     <string>NSApplication</string>
 
+    <!-- Application Category -->
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.navigation</string>
+
     <!-- Network Permissions -->
     <key>NSAppTransportSecurity</key>
     <dict>
@@ -45,3 +49,4 @@
     </array>
 </dict>
 </plist>
+

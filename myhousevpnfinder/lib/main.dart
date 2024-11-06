@@ -2,7 +2,6 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-// List of IP addresses with 252
 const List<String> routerGatewaysWith252 = [
   "192.168.0.252",
   "192.168.1.252",
@@ -61,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _deviceFound = false;
     });
 
+    // Check for MyHouseVPN device (IP ending in .252)
     for (String ip in routerGatewaysWith252) {
       final isReachable = await _checkIfIpIsReachable(ip);
       if (isReachable) {
@@ -84,7 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  // Check if the response is valid by inspecting the status code only
   Future<bool> _checkIfIpIsReachable(String ip) async {
     try {
       final response = await http.get(Uri.parse('http://$ip'), headers: {
@@ -111,10 +110,19 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Image.asset(
-                  'assets/logo.png', // Path for your logo image
-                  width: 80,
-                  height: 80,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyApp()),
+                      (route) => false,
+                    );
+                  },
+                  child: Image.asset(
+                    'assets/logo.png', // Path for your logo image
+                    width: 80,
+                    height: 80,
+                  ),
                 ),
                 SizedBox(height: 20),
                 Text(
